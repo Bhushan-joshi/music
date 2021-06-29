@@ -7,7 +7,7 @@ export default function useAuth(code) {
 	const [expiresIn, setExpiresIn] = useState()
 
 	useEffect(() => {
-		axios.post(`http://localhost:${process.env.PORT || 3001}/login`, {
+		axios.post(`https://music-app-in.herokuapp.com/login`, {
 			code,
 		}).then(res => {
 			setAccessToken(res.data.accessToken)
@@ -21,7 +21,7 @@ export default function useAuth(code) {
 	useEffect(() => {
 		if (!refreshToken || !expiresIn) return
 		const interval = setInterval(() => {
-			axios.post(`http://localhost:${process.env.PORT || 3001}/refresh`, {
+			axios.post(`https://music-app-in.herokuapp.com/refresh`, {
 				refreshToken,
 			}).then(res => {
 				console.log(res.data);

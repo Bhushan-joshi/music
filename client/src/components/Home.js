@@ -31,7 +31,7 @@ const Home = ({ code }) => {
 		if (!playingTrack) return
 
 		axios
-			.get(`http://localhost:${process.env.PORT || 3001}/lyrics`, {
+			.get(`https://music-app-in.herokuapp.com/lyrics`, {
 				params: {
 					track: playingTrack.title,
 					artist: playingTrack.artist,
