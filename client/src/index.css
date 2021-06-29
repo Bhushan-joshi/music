@@ -1,0 +1,40 @@
+body{
+	background-color: #000000;
+	font-family: 'Poppins', sans-serif;
+}
+.img{
+	height: 450px;
+	width: 450px;
+	animation: rotation 10s infinite linear;
+}
+.Track_image{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.lyrics{
+	white-space: pre;
+	color: #ffffff;
+}
+
+
+@keyframes rotation {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(359deg);
+	}
+  }
+
+@media (max-width: 991px) {
+	img{
+		height: 200px;
+		width: 200px;
+	}
+	.Track_image{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
