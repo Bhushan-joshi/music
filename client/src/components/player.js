@@ -17,7 +17,7 @@ export default function Player({ accessToken, trackUri }) {
       play={play}
       uris={trackUri ? [trackUri] : []}
       name="Web Player"
-      syncExternalDevice
+      
       initialVolume={0}
       styles={{
         activeColor: '#fff',
@@ -28,6 +28,7 @@ export default function Player({ accessToken, trackUri }) {
         trackArtistColor: '#ccc',
         trackNameColor: '#fff',
       }}
+      magnifySliderOnHover
     />
   )
 }

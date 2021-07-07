@@ -5,6 +5,8 @@ body{
 .img{
 	height: 450px;
 	width: 450px;
+}
+.img-animate{
 	animation: rotation 10s infinite linear;
 }
 .Track_image{
@@ -16,7 +18,16 @@ body{
 	white-space: pre;
 	color: #ffffff;
 }
+.spotify_img{
+	height: 30px;
+	width: 30px;
+}
 
+.player{
+	position: fixed;
+	bottom: 0;
+	width: 70%;
+}
 
 @keyframes rotation {
 	from {
@@ -36,5 +47,9 @@ body{
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+	.spotify_img{
+		height: 30px;
+		width: 30px;
 	}
 }

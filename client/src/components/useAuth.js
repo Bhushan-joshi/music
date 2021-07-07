@@ -8,12 +8,12 @@ export default function useAuth(code) {
 
 	useEffect(() => {
 		axios.post(`https://music-app-in.herokuapp.com/login`, {
-			code,
+			code:code,
 		}).then(res => {
 			setAccessToken(res.data.accessToken)
 			setRefreshToken(res.data.refreshToken)
 			setExpiresIn(res.data.expiresIn)
-			window.history.pushState({}, null, "/ ")
+			window.history.pushState({}, null, "/")
 		}).catch(err => {
 			window.location = "/"
 		})
